@@ -5,4 +5,4 @@
 for "Dein Star" to perform OTP operations.
 
 # ug
-ungroup/group for ds, fds and pads (https://github.com/stefanclaas/pads).
+ungroup/group for ds, fds and [pads](https://github.com/stefanclaas/pads).
