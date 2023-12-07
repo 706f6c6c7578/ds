@@ -10,7 +10,7 @@ import (
 
 func main() {
 	group := flag.Bool("g", false, "group the input back into original form")
-	groupsPerLine := flag.Int("n", 5, "number of groups per line when grouping")
+	groupsPerLine := flag.Int("n", 10, "number of groups per line when grouping")
 	flag.Parse()
 
 	scanner := bufio.NewScanner(os.Stdin)
