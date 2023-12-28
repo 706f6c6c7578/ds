@@ -11,6 +11,7 @@ import (
 func main() {
 	group := flag.Bool("g", false, "group the input back into original form")
 	groupsPerLine := flag.Int("n", 10, "number of groups per line when grouping")
+	charactersPerGroup := flag.Int("c", 5, "number of characters per group when grouping")
 	flag.Parse()
 
 	scanner := bufio.NewScanner(os.Stdin)
@@ -27,9 +28,9 @@ func main() {
 		var groupedResult string
 		for i, rune := range result {
 			groupedResult += string(rune)
-			if (i+1)%5 == 0 && i != len(result)-1 {
+			if (i+1)%*charactersPerGroup == 0 && i != len(result)-1 {
 				groupedResult += " "
-				if (i+1)%(5**groupsPerLine) == 0 {
+				if (i+1)%(*charactersPerGroup**groupsPerLine) == 0 {
 					groupedResult += "\n"
 				}
 			}
